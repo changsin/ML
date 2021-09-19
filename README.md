@@ -1,2 +1,2 @@
 # ML
-Machine Learning sample code
+Machine Learning code samples
