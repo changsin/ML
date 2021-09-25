@@ -1,3 +1,5 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 # Week 1:
 - [MATLAB README](https://github.com/T-Mosher/ml-support/blob/main/MATLAB_README.pdf)
 
