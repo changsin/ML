@@ -2,8 +2,8 @@
 - [MATLAB README](https://github.com/T-Mosher/ml-support/blob/main/MATLAB_README.pdf)
 
 # Week 2
-Cost function: $ J(\theta) = \frac{1}{2m} \sum \limits_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2 $
-Hypothesis for linear regression: $ h\theta(x) = \theta^Tx = \theta_0 + \theta_1x1 $
+Cost function: $$ J(\theta) = \frac{1}{2m} \sum \limits_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2 $$
+Hypothesis for linear regression: $$ h\theta(x) = \theta^Tx = \theta_0 + \theta_1x1 $$
 
 - gradientDescent.m
 ```
