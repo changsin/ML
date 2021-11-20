@@ -7,7 +7,46 @@
 Cost function: $$ J(\theta) = \frac{1}{2m} \sum \limits_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})^2 $$
 Hypothesis for linear regression: $$ h\theta(x) = \theta^Tx = \theta_0 + \theta_1x1 $$
 
-- gradientDescent.m
+##d costFunction.m
+```
+function [J, grad] = costFunction(theta, X, y)
+%COSTFUNCTION Compute cost and gradient for logistic regression
+%   J = COSTFUNCTION(theta, X, y) computes the cost of using theta as the
+%   parameter for logistic regression and the gradient of the cost
+%   w.r.t. to the parameters.
+
+% Initialize some useful values
+m = length(y); % number of training examples
+
+grad = zeros(size(theta));
+
+% You need to return the following variables correctly 
+%term1 = y*log(sigmoid(X));
+%term2 = (1 - y)*log(1- sigmoid(X));
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Compute the cost of a particular choice of theta.
+%               You should set J to the cost.
+%               Compute the partial derivatives and set grad to the partial
+%               derivatives of the cost w.r.t. each parameter in theta
+%
+% Note: grad should have the same dimensions as theta
+%
+
+term1 =  -1 * (y .* log(sigmoid(X * theta)));
+term2 = (1 - y) .* log(1 - sigmoid(X * theta));
+
+J = sum(term1 - term2) / m;
+
+grad = (X' * (sigmoid(X * theta) - y)) * (1/m);
+
+% grad = 1/m * sum((sigmoid(X) - y)*X);
+
+% =============================================================
+
+end
+```
+### gradientDescent.m
 ```
 function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
 %GRADIENTDESCENT Performs gradient descent to learn theta
