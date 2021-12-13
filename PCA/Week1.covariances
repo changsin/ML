@@ -1,0 +1,140 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "10.LDA.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true,
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/changsin/ML/blob/main/PCA/Week1.covariances\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# PCA: Week 1\n"
+      ],
+      "metadata": {
+        "id": "RjcXllndCECU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Quiz\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "4k1bJvcXCczr"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 1. What is the variance of the following dataset? "
+      ],
+      "metadata": {
+        "id": "d6G5fSfKCjF8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "D = np.array([1, 2, 3, 2])\n",
+        "D = D * 2\n",
+        "D_mean = D.mean()\n",
+        "deltas = D - D_mean\n",
+        "\n",
+        "np.sum(deltas**2 / 4)"
+      ],
+      "metadata": {
+        "id": "fSfLbZzdCIZQ",
+        "outputId": "a96e48b0-f15b-471f-c4aa-3e9a2f9426d2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "D.std()"
+      ],
+      "metadata": {
+        "id": "yAjnX-8vDMbE",
+        "outputId": "a5b1e333-ce07-4181-dfed-806788170ea0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0.7071067811865476"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 5.\n",
+        "Assuming we have mean $\\bar{x}_{n-1} $\n",
+        " and variance $ \\sigma_{n-1}^2 $ for some dataset $ \\mathcal D_{n-1} $ with n-1 samples. What would be the  variance $ \\sigma_{n}^2 $ if we add a new element $ x_* $ to the dataset (assuming you have computed the new sample mean $ \\bar{x}_n $) ?\n",
+        "\n",
+        "$$ \\sigma_n^2 = \\frac{n-1}{n}\\sigma_{n-1}^2 + \\frac{1}{n}(x_* - \\bar{x}_{n-1}) (x_*-\\bar{x}_{n}) $$\n"
+      ],
+      "metadata": {
+        "id": "zf38JJ95KOTx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "HRAxfHCtE8VY"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
